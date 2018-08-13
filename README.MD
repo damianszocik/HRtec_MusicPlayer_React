@@ -14,7 +14,7 @@ Styles are written based on BEM methodology using SASS. Transpiling process is h
 As mentioned above, webpack is used to process all the JSX syntax and JavaScript code (via Babel loader), SASS styling (css-loader, postcss-loader, sass-loader) and also resources like images (image-webpack-loader) and fonts (url-loader).
 <br/><br/>
 ### Working product
-Working demo of the app can be found [here](https://github.io/)
+Working demo of the app can be found [here](https://damianszocik.github.io/HRtec_MusicPlayer_React/)
 <br/><br/>
 ### Development
 To start developing the app there are 3 simple steps to follow:
@@ -22,7 +22,7 @@ To start developing the app there are 3 simple steps to follow:
 * download and install node.js, npm and git client if you don't have them installed already. 
 * clone the repository by typing in the command line:
 ```shell
-git clone https://github.com/repo_url
+git clone https://github.com/damianszocik/HRtec_MusicPlayer_React.git
 ```
 * install all needed dependencies:
 ```shell
