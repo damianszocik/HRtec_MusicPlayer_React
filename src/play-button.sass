@@ -1,0 +1,42 @@
+//play button colors
+$button-color: $color-purple
+$progress-bar-color: $color-grey
+$outline-color: white
+//play button sizes
+$outline-size: 1px
+$button-size: 50px
+$progress-bar-size: 5px
+
+.play-pause-button
+	width: $button-size + $outline-size + (2 * $progress-bar-size)
+	height: $button-size + $outline-size + (2 * $progress-bar-size)
+	box-sizing: border-box
+	position: relative
+	transition: all $transition-basic
+	&:hover
+		transform: scale(1.1, 1.1)
+	&__button 
+		box-sizing: border-box
+		position: absolute
+		top: $progress-bar-size+$outline-size
+		left: $progress-bar-size+$outline-size
+		width: $button-size
+		height: $button-size
+		border-radius: 50%
+		background-color: $button-color
+		border: $outline-size solid $outline-color
+		background-image: url("../assets/play-pause-sprite.svg") 
+		background-position: 0 0
+		background-size: cover
+		&--active
+			background-position: 100% 0
+	&__bar
+		box-sizing: border-box
+		position: absolute
+		top: $outline-size
+		left: $outline-size
+		width: $button-size+(2*$progress-bar-size)
+		height: $button-size+(2*$progress-bar-size)
+		border-radius: 50%
+		background-color: $progress-bar-color
+		background-image: linear-gradient(220deg, transparent 50%, $outline-color 50%), linear-gradient(90deg, $outline-color 50%, transparent 50%)

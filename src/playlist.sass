@@ -1,0 +1,100 @@
+.playlist
+  position: absolute
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  height: 100%
+  top: 0
+  left: 100%
+  padding: 21px
+  box-sizing: border-box
+  opacity: 0
+  background: $color-playlist-background
+  transition: all $transition-basic
+  &--active
+    left: 0
+    opacity: 1
+  &__header
+    position: absolute
+    justify-content: flex-start
+    top: 0
+    left: 0
+    height: 86px
+    width: 320px
+    padding: 0 0 10px 0
+    opacity: 1
+    background: linear-gradient($color-playlist-background 87%, transparent 100%)
+    &__title
+      position: static
+      padding: 0
+      margin-top: 29px
+      margin-left: 40px
+      opacity: 1
+      color: $color-purple
+      font-weight: bold
+      height: auto
+      width: auto
+  &__footer
+    position: absolute
+    bottom: 0
+    top: auto
+    left: 0
+    height: 66px
+    width: 320px
+    padding: 0
+    opacity: 1
+    background: linear-gradient(to top, $color-playlist-background 60%, transparent 100%)
+  &__content
+    position: relative
+    top: 0
+    left: 0
+    padding: 0 5px 20px 5px
+    margin-top: 55px
+    opacity: 1
+    overflow: 
+    justify-content: unset
+    &__item
+      justify-content: center
+      padding: 0
+      margin: 0
+      padding-right: 20px
+      overflow: hidden
+      min-height: 78px
+      flex-direction: row
+      justify-content: center
+      &__song-details
+        flex-direction: column
+        align-items: flex-start
+        height: 100%
+        &__artist
+          min-height: auto
+          height: auto
+          overflow: visible
+          margin: 0 0 3px 0
+          color: $color-grey-darker
+          display: inline
+        &__title
+          min-height: auto
+          height: auto
+          overflow: visible
+          margin: 3px 0 0 0
+          cursor: pointer
+    &__divider
+      padding: 0
+      margin: 0
+      border: 0
+      min-height: 1px
+      height: 1px
+      background: $color-grey
+      border-right: 20px solid $color-playlist-background
+    &__button
+      height: auto
+      width: auto
+      padding: 0
+      margin: 0
+      overflow: visible
+      &:hover
+        transform: scale(1.1, 1.1)
+      &--share
+        margin-right: 10px
